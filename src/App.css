@@ -11,8 +11,8 @@
 
 .content {
   z-index: 1;
-  -webkit-text-stroke: 1.5px black;
   opacity: 0.8;
+  -webkit-text-stroke: 1.5px black;
 }
 
 h1 {
