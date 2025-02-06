@@ -27,23 +27,10 @@ const videoList = [
 
 
 const getRandomVideo = () => {
-  // Create an empty array to hold 5 random videos
-  let cutVideoList = [];
-  
-  // Select 5 random unique videos
-  while (cutVideoList.length < 5) {
-    const randomIndex = Math.floor(Math.random() * videoList.length);
-    const video = videoList[randomIndex];
-    
-    // Avoid duplicates by checking if the video is already in the array
-    if (!cutVideoList.includes(video)) {
-      cutVideoList.push(video);
-    }
-  }
   
   // Pick a random video from the 5 selected ones
-  const randomIndex = Math.floor(Math.random() * 5);
-  return cutVideoList[randomIndex];
+  const randomIndex = Math.floor(Math.random() * videoList.length);
+  return videoList[randomIndex];
 };
 
 const getRandomDuration = () => {
