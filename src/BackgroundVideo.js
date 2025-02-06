@@ -8,44 +8,46 @@ const videoList = [
   "video3.mp4",
   "video5.mp4",
   "output000.mp4",
-  "output001.mp4",
   "output002.mp4",
-  "output003.mp4",
   "output004.mp4",
-  "output005.mp4",
   "output006.mp4",
-  "output007.mp4",
   "output2000.mp4",
-  "output2001.mp4",
   "output2002.mp4",
-  "output2003.mp4",
   "output2004.mp4",
-  "output2005.mp4",
   "output2006.mp4",
-  "output2006.mp4",
-  "output2007.mp4",
   "output2008.mp4",
-  "output2009.mp4",
   "output2010.mp4",
-  "output2011.mp4",
   "output2012.mp4",
-  "output2013.mp4",
   "output2014.mp4",
-  "output2015.mp4",
   "output2016.mp4",
-  "output2017.mp4",
   "output2018.mp4",
-  "output2019.mp4",
   "output2020.mp4",
 ];
 
+
+
 const getRandomVideo = () => {
-  const randomIndex = Math.floor(Math.random() * videoList.length);
-  return videoList[randomIndex];
+  // Create an empty array to hold 5 random videos
+  let cutVideoList = [];
+  
+  // Select 5 random unique videos
+  while (cutVideoList.length < 5) {
+    const randomIndex = Math.floor(Math.random() * videoList.length);
+    const video = videoList[randomIndex];
+    
+    // Avoid duplicates by checking if the video is already in the array
+    if (!cutVideoList.includes(video)) {
+      cutVideoList.push(video);
+    }
+  }
+  
+  // Pick a random video from the 5 selected ones
+  const randomIndex = Math.floor(Math.random() * 5);
+  return cutVideoList[randomIndex];
 };
 
 const getRandomDuration = () => {
-  return Math.floor(Math.random() * (3000 - 500 + 1)) + 500; // Random duration between 500ms and 3000ms
+  return Math.floor(Math.random() * (2000 - 250 + 1)) + 250; // Random duration between 250ms and 2000ms
 };
 
 
@@ -64,8 +66,16 @@ const BackgroundVideo = () => {
 
   return (
     <div className="background-video">
-      <video autoPlay loop muted key={videoSrc}>
-        <source src={`/VIDEOS/${videoSrc}`} type="video/mp4" />
+      <video autoPlay loop muted key={videoSrc}
+        onCanPlay={() => console.log("Video loaded successfully")}
+        onError={(e) => {
+          console.error("Error loading video:", e);
+          console.error("Video source:", e.target.src);
+          console.error("Error code:", e.target.error && e.target.error.code);}}
+        style={{ backgroundColor: '#000' }} // Ensures black background if video fails
+      >
+        <source src={`/unpocomas/VIDEOS/${videoSrc}`} type="video/mp4" />
+        {console.log(videoSrc)}
         Your browser does not support the video tag.
       </video>
     </div>
