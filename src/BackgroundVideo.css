@@ -1,16 +1,16 @@
-/* src/BackgroundVideo.css */
 .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-  
-  video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  
+  position: fixed;   /* Fixes the video in the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;       /* Ensure it stays in the background */
+  overflow: hidden;  /* Hide any overflow */
+}
+
+.background-video video {
+  object-fit: cover;   /* Make the video cover the container */
+  width: 100vw;         /* Set width to 100% of viewport width */
+  height: 100vh;        /* Set height to 100% of viewport height */
+  object-position: center; /* Ensure the video is centered within the container */
+}
