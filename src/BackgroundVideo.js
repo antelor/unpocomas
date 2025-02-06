@@ -34,7 +34,7 @@ const getRandomVideo = () => {
 };
 
 const getRandomDuration = () => {
-  return Math.floor(Math.random() * (2000 - 250 + 1)) + 250; // Random duration between 250ms and 2000ms
+  return Math.floor(Math.random() * (5000 - 3000 + 1)) + 3000; // Random duration between 3000ms and 5000ms
 };
 
 
