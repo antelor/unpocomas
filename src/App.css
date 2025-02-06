@@ -11,7 +11,7 @@
 
 .content {
   z-index: 1;
-  -webkit-text-stroke: 3px black;
+  -webkit-text-stroke: 1.5px black;
   opacity: 0.8;
 }
 
@@ -21,7 +21,7 @@ h1 {
 }
 
 .timer {
-  font-size: 8rem;
+  font-size: 4rem;
   font-weight: bold;
 }
 
