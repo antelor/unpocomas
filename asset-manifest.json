@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/unpocomas/static/css/main.84f00335.css",
+    "main.js": "/unpocomas/static/js/main.e95a99a9.js",
+    "index.html": "/unpocomas/index.html",
+    "main.84f00335.css.map": "/unpocomas/static/css/main.84f00335.css.map",
+    "main.e95a99a9.js.map": "/unpocomas/static/js/main.e95a99a9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84f00335.css",
+    "static/js/main.e95a99a9.js"
+  ]
+}
