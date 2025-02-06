@@ -57,7 +57,7 @@ function App() {
         onClick={handleRedirect}
         onMouseEnter={() => setIsHovered(true)} // Set hover state to true when mouse enters
         onMouseLeave={() => setIsHovered(false)} // Set hover state to false when mouse leaves
-        >PRESAVE</div> : <Timer targetDate={formattedDate} />}
+        >un poco más</div> : <Timer targetDate={formattedDate} />}
         
       </div>
     </div>
