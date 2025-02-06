@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/unpocomas/static/css/main.7921498e.css",
-    "main.js": "/unpocomas/static/js/main.ba08f580.js",
+    "main.js": "/unpocomas/static/js/main.ad512ddd.js",
     "index.html": "/unpocomas/index.html",
     "main.7921498e.css.map": "/unpocomas/static/css/main.7921498e.css.map",
-    "main.ba08f580.js.map": "/unpocomas/static/js/main.ba08f580.js.map"
+    "main.ad512ddd.js.map": "/unpocomas/static/js/main.ad512ddd.js.map"
   },
   "entrypoints": [
     "static/css/main.7921498e.css",
-    "static/js/main.ba08f580.js"
+    "static/js/main.ad512ddd.js"
   ]
 }
