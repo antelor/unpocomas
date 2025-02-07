@@ -61,7 +61,7 @@ const BackgroundVideo = () => {
           console.error("Error code:", e.target.error && e.target.error.code);}}
         style={{ backgroundColor: '#000' }} // Ensures black background if video fails
       >
-        <source src={`/unpocomas/VIDEOS/${videoSrc}`} type="video/mp4" />
+        <source src={`/VIDEOS/${videoSrc}`} type="video/mp4" />
         {console.log(videoSrc)}
         Your browser does not support the video tag.
       </video>
